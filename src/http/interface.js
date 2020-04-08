@@ -7,7 +7,7 @@ import axios from './api'
 // }
 
 export const apiURL = () => {
-  return 'http://127.0.0.1:5000/'
+  return 'http://127.0.0.1:5000'
 }
 
 export const websocketURL = () => {
@@ -19,6 +19,17 @@ export const websocketURL = () => {
 export const getIndexRes = () => {
   return axios({
     url: apiURL()
+  })
+}
+
+export const login = (usrName, pwd) => {
+  return axios({
+    url: `${apiURL()}/login`,
+    method: 'post',
+    data: {
+      usr_name: usrName,
+      pwd: pwd
+    }
   })
 }
 
@@ -43,5 +54,6 @@ export default {
   // getUserInfo,
   websocketURL,
   apiURL,
-  getIndexRes
+  getIndexRes,
+  login
 }
