@@ -48,7 +48,7 @@ export default function $axios (options) {
         } catch (error) {
           return response.request.responseText
         }
-        if (data.code === 0) {
+        if (data.code === 0 || data.code === 200) {
           return data
         } else {
           const err = Error(data.description)

@@ -5,7 +5,7 @@ import axios from './api'
 // export const oauthPath = () => {
 //   return '/login'
 // }
-const version = '/express'
+// const version = '/express'
 
 export const expressURL = () => {
   return 'http://122.51.19.128:8089'
@@ -43,11 +43,11 @@ export const login = (usrName, pwd) => {
 
 export const getAllUsr = () => {
   return axios({
-    // url: `${expressURL()}/api/usr/get-all`,
+    url: `${expressURL()}/api/usr/get-all`,
     // url: `${localExpressURL()}/api/usr/get-all`,
-    url: `${version}/api/usr/get-all`,
-    method: 'get',
-    params: { id: 222, name: '2332' }
+    // url: `${version}/api/usr/get-all`,
+    method: 'get'
+    // params: { id: 222, name: '2332' }
   })
 }
 
