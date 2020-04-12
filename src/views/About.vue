@@ -4,14 +4,39 @@
     <p>this is content</p>
     <button @click="handleClick">click me</button>
     <button @click="loginTest">click me to login</button>
+    <button @click="handleGetPerson">click to ge person</button>
+    <table>
+      <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>email</th>
+        <th>gender</th>
+      </tr>
+      <tr
+        v-for="item in usrList"
+        :key="item.id"
+      >
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.gender | getGender }}</td>
+      </tr>
+    </table>
   </div>
 </template>
 
 <script>
 export default {
+  filters: {
+    getGender (value) {
+      const tmp = ['未知', 'male', 'female']
+      return tmp[value]
+    }
+  },
   data () {
     return {
-      a: 1111
+      a: 1111,
+      usrList: []
     }
   },
   methods: {
@@ -33,6 +58,17 @@ export default {
         console.log('res of login is: ', res)
       }).catch(err => {
         console.log(err)
+      })
+    },
+    handleGetPerson () {
+      this.$api.getAllUsr().then(res => {
+        if (res.code === 200) {
+          this.usrList = res.data
+        } else {
+          alert('有病！')
+        }
+      }).catch(err => {
+        console.error(err)
       })
     }
   }

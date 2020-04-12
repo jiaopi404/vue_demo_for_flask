@@ -5,6 +5,14 @@ import axios from './api'
 // export const oauthPath = () => {
 //   return '/login'
 // }
+const version = '/express'
+
+export const expressURL = () => {
+  return 'http://122.51.19.128:8089'
+}
+export const localExpressURL = () => {
+  return 'http://localhost:8089'
+}
 
 export const apiURL = () => {
   return 'http://127.0.0.1:5000'
@@ -33,6 +41,16 @@ export const login = (usrName, pwd) => {
   })
 }
 
+export const getAllUsr = () => {
+  return axios({
+    // url: `${expressURL()}/api/usr/get-all`,
+    // url: `${localExpressURL()}/api/usr/get-all`,
+    url: `${version}/api/usr/get-all`,
+    method: 'get',
+    params: { id: 222, name: '2332' }
+  })
+}
+
 // export const bcLogin = (params) => {
 //   return axios({
 //     url: `${version}/user/login`,
@@ -55,5 +73,6 @@ export default {
   websocketURL,
   apiURL,
   getIndexRes,
-  login
+  login,
+  getAllUsr
 }
