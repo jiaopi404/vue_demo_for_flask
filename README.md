@@ -23,6 +23,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-=======
+
+sjdfsdkafja fakljakd jsklfsjak dkjl fsakl a;klj
+
 vue demo for flask
->>>>>>> e95e54f486b387f310cafb34c3f93be57adc468e
