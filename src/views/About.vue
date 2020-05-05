@@ -4,7 +4,7 @@
     <p>this is content</p>
     <button @click="handleClick">click me</button>
     <button @click="loginTest">click me to login</button>
-    <button @click="handleGetPerson">click to ge person</button>
+    <button @click="handleGetPerson">click to get person</button>
     <table>
       <tr>
         <th>id</th>
