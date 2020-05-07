@@ -45,7 +45,7 @@ export default {
         } else {
           this.tmpData.push(...arr)
         }
-      }, 50)
+      }, 1000)
     },
     pushData () {
       console.log('get data function')
