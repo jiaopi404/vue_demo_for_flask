@@ -13,7 +13,7 @@ npm run serve
 
 ### Compiles and minifies for production
 ```
-npm run build
+npm run build       是打发打发点 大是大非 
 ```
 
 ### Lints and fixes files
