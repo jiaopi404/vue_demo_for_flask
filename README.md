@@ -13,7 +13,7 @@ npm run serve
 
 ### Compiles and minifies for production
 ```
-npm run build       是打发打发点 大是大非 氪金大佬法式咖啡就卡死的空间阿昆达的就阿卡丽靠捡垃圾卡开了房刷卡记录阿胶颗粒
+npm run build       是打发打发点 大是大非 氪金大佬法式咖啡就卡死的空间阿昆达的就阿卡丽靠捡垃圾卡开了房刷卡记录阿胶颗粒上了对方就爱了康复科扩大杀戮空间
 ```
 
 ### Lints and fixes files
