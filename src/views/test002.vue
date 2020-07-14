@@ -12,6 +12,18 @@
         width="180">
       </el-table-column>
     </el-table>
+    <br />
+    <h3>验证 v-for 的 filter</h3>
+    输入: <input type="text" v-model="search">
+    <ul>
+      <li
+        v-for="friend in friends"
+        :key="friend.name"
+      >
+        {{ friend.name }}
+<!--        v-for="friend in friends | filterBy search in 'name'"-->
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -29,7 +41,13 @@ export default {
         { prop: 'email', label: '邮箱' },
         { prop: 'gender', label: '性别' },
         { prop: 'address', label: '地址' }
-      ]
+      ],
+      friends: [
+        { name: 'Bob' },
+        { name: 'Jane' },
+        { name: 'James' }
+      ],
+      search: ''
     }
   },
   methods: {
