@@ -21,16 +21,19 @@
 
 <script>
 import Test004 from './test004'
+import Test005 from './test005'
 export default {
   name: 'others.vue',
   components: {
-    Test004
+    Test004,
+    Test005
   },
   data () {
     return {
       comp: Test004,
       compList: [
-        { compName: 'test004', comp: Test004 }
+        { compName: 'test004', comp: Test004 },
+        { compName: 'test005', comp: Test005 }
       ]
     }
   }
