@@ -22,18 +22,21 @@
 <script>
 import Test004 from './test004'
 import Test005 from './test005'
+import Test006 from './test006'
 export default {
   name: 'others.vue',
   components: {
     Test004,
-    Test005
+    Test005,
+    Test006
   },
   data () {
     return {
       comp: Test004,
       compList: [
         { compName: 'test004', comp: Test004 },
-        { compName: 'test005', comp: Test005 }
+        { compName: 'test005', comp: Test005 },
+        { compName: 'test006', comp: Test006 }
       ]
     }
   }
@@ -44,8 +47,12 @@ export default {
 .others {
   width: 960px;
   margin: 0 auto;
+  text-align: left;
+  padding: 15px 50px;
 }
 .others__btn-list {
   text-align: center;
+  text-align: left;
+  padding: 0 50px;
 }
 </style>
