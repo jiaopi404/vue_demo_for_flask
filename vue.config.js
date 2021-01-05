@@ -29,6 +29,11 @@ module.exports = {
         target: 'http://47.93.35.179:8022/',
         ws: true,
         changeOrigin: true
+      },
+      '/api-v1': {
+        target: 'http://localhost:18081/',
+        ws: true,
+        changeOrigin: true
       }
       // '/api/user': {
       //   target: 'http://47.93.35.179:8020/',

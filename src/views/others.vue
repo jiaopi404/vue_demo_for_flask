@@ -23,6 +23,7 @@
 import Test004 from './test004'
 import Test005 from './test005'
 import Test006 from './test006'
+import Test007 from './test007'
 export default {
   name: 'others.vue',
   components: {
@@ -36,7 +37,8 @@ export default {
       compList: [
         { compName: 'test004', comp: Test004 },
         { compName: 'test005', comp: Test005 },
-        { compName: 'test006', comp: Test006 }
+        { compName: 'test006', comp: Test006 },
+        { compName: 'test007', comp: Test007 }
       ]
     }
   }

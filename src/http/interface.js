@@ -65,6 +65,12 @@ export const getAllUsr = () => {
 //     method: 'get'
 //   })
 // }
+export const getGoods = spuId => {
+  return axios({
+    url: `/api-v1/spu/goods/${spuId}`,
+    method: 'get'
+  })
+}
 
 export default {
   // oauthPath,
@@ -74,5 +80,6 @@ export default {
   apiURL,
   getIndexRes,
   login,
-  getAllUsr
+  getAllUsr,
+  getGoods
 }
